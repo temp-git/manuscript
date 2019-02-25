@@ -10,8 +10,6 @@ This is a repository of codes used in analysis of RNA-seq data for Final Honors 
 2. Differential Expression Analysis: <b> differential_expression </b>
 
     - Differential Analysis 
-    
-    - HNF4A Motif Occurence (FIMO)
 
     - Hypergeometric Enrichment Analysis of Gene Markers 
     
