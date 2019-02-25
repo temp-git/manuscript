@@ -21,8 +21,6 @@ This is a repository of codes used in analysis of RNA-seq data for Final Honors 
 
 3. Weighted Correlation Network Analysis: <b> correlation_network </b>
 
-    - WGCNA 
-
-    - Gene Ontology Enrichment Analysis
+    - WGCNA and Gene Ontology Enrichment Analysis
 
     - Hypergeometric Enrichment Analysis 
