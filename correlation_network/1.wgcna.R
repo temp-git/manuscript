@@ -203,7 +203,7 @@ dev.off()
 save(MEs, mergedMEs, dynamicColors, mergedColors, geneTree,
      file = "wgcna_construction.RData")
 
-# t-test 
+###t-test 
 eigengene = mergedMEs
 rownames(eigengene) = rownames(batch_cor)
 de_eigen = eigengene[1:11,]
