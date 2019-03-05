@@ -23,18 +23,12 @@ ord_samples = c("EXP22DESB", "EXP26DESB","EXP28DESB",
                 "EXP22BCL04A", "EXP26BCL04A", "EXP28BCL04A")
 
 
-me_barplots_col = c(rep(c("dodgerblue4"), times = 3),
-                    rep(c("dodgerblue3"), times = 3),
-                    rep(c("firebrick3"), times = 2),
-                    rep(c("firebrick2"), times = 3),
-                    rep(c("dodgerblue4"), times = 3),
-                    rep(c("dodgerblue3"), times = 3),
-                    rep(c("firebrick3"), times = 2),
-                    rep(c("firebrick2"), times = 3),
-                    rep(c("dodgerblue4"), times = 3),
-                    rep(c("dodgerblue3"), times = 3),
-                    rep(c("firebrick3"), times = 3),
-                    rep(c("firebrick2"), times = 3))
+me_barplots_col = c(rep(c("dodgerblue4"), times = 6),
+                    rep(c("firebrick3"), times = 5),
+                    rep(c("dodgerblue4"), times = 6),
+                    rep(c("firebrick3"), times = 5),
+                    rep(c("dodgerblue4"), times = 6),
+                    rep(c("firebrick3"), times = 6))
 
 ###################################################
 
