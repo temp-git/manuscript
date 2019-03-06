@@ -194,6 +194,17 @@ for (i in 1:length(unique(mergedColors))){
           names.arg = rownames(batch_cor), cex.names=0.75)}
 dev.off()
 
+pdf("ME_barplots_merged.pdf",width = 10, height = 4)
+par(las = 2, mar = c(8,5,4,1))
+for (i in 1:length(unique(mergedColors))){
+  which.module = unique(mergedColors)[i]
+  ME = mergedMEs[, paste("ME", which.module, sep = "")]
+  barplot(ME, ylab = "", xlab="",
+          main = which.module,
+          col = me_barplots_col,
+          names.arg="", cex.names=1)}
+dev.off()
+
 save(MEs, mergedMEs, dynamicColors, mergedColors, geneTree,
      file = "wgcna_construction.RData")
 
