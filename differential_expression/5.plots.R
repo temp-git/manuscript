@@ -11,7 +11,8 @@ library(RColorBrewer)
 # a fast (but bad plot) tool is venny: http://bioinfogp.cnb.csic.es/tools/venny/ 
 # plot using VennDiagram package is better looking 
 
-venn.pal = pal_simpsons("springfield", alpha = 0.5)(3) # palette
+pal_simpsons("springfield", alpha = 0.2)(16) # palette
+venn.pal = c("#8A919733", "#FED439CC", "#1A9993CC") # choose colours to highlight PE and BLC
 
 # ALL (not just HNF4A targets) deg across development stages 
 pdf("all.deg.pdf")
@@ -62,48 +63,48 @@ dev.off()
 
 # HNF4A DEG downregulated
 pdf("all.hnf4a.t.deg.down.pdf")
-all.deg <- draw.triple.venn(area1 = 7 + 2 + 9 + 4,
-                            area2 = 287 + 2 + 9 + 57,
-                            area3 = 322 + 4 + 9 + 57,
-                            n12 = 2 + 9,
-                            n13 = 4 + 9,
-                            n23 = 57 + 9,
-                            n123 = 9,
-                            category = c("DE", "PE", "BLC"),
-                            fill = venn.pal,
-                            alpha = 1,
-                            fontface = "bold",
-                            fontfamily = "sans",
-                            cex = 5,
-                            cat.fontface = "bold",
-                            cat.fontfamily = "sans",
-                            cat.cex = 6,
-                            cat.default.pos = "outer",
-                            lty = "blank",
-                            overrideTriple = 1) #all deg across development stages (cut-off LFC = 0)
+draw.triple.venn(area1 = 7 + 2 + 9 + 4,
+                 area2 = 287 + 2 + 9 + 57,
+                 area3 = 322 + 4 + 9 + 57,
+                 n12 = 2 + 9,
+                 n13 = 4 + 9,
+                 n23 = 57 + 9,
+                 n123 = 9,
+                 category = c("DE", "PE", "BLC"),
+                 fill = venn.pal,
+                 alpha = 1,
+                 fontface = "plain",
+                 fontfamily = "sans",
+                 cex = 4,
+                 cat.fontface = "plain",
+                 cat.fontfamily = "sans",
+                 cat.cex = 6,
+                 cat.default.pos = "outer",
+                 lty = "blank",
+                 overrideTriple = 1) #all deg across development stages (cut-off LFC = 0)
 dev.off()
 
 # HNF4A DEG upregulated 
 pdf("all.hnf4a.t.deg.up.pdf")
-all.deg <- draw.triple.venn(area1 = 8 + 2 + 4 + 2,
-                            area2 = 238 + 2 + 4 + 101,
-                            area3 = 295 + 2 + 4 + 101,
-                            n12 = 2 + 4,
-                            n13 = 2 + 4,
-                            n23 = 101 + 4,
-                            n123 = 4,
-                            category = c("DE", "PE", "BLC"),
-                            fill = venn.pal,
-                            alpha = 1,
-                            fontface = "bold",
-                            fontfamily = "sans",
-                            cex = 5,
-                            cat.fontface = "bold",
-                            cat.fontfamily = "sans",
-                            cat.cex = 6,
-                            cat.default.pos = "outer",
-                            lty = "blank",
-                            overrideTriple = 1) #all deg across development stages (cut-off LFC = 0)
+draw.triple.venn(area1 = 8 + 2 + 4 + 2,
+                 area2 = 238 + 2 + 4 + 101,
+                 area3 = 295 + 2 + 4 + 101,
+                 n12 = 2 + 4,
+                 n13 = 2 + 4,
+                 n23 = 101 + 4,
+                 n123 = 4,
+                 category = c("DE", "PE", "BLC"),
+                 fill = venn.pal,
+                 alpha = 1,
+                 fontface = "plain",
+                 fontfamily = "sans",
+                 cex = 4,
+                 cat.fontface = "bold",
+                 cat.fontfamily = "sans",
+                 cat.cex = 6,
+                 cat.default.pos = "outer",
+                 lty = "blank",
+                 overrideTriple = 1) #all deg across development stages (cut-off LFC = 0)
 dev.off()
 ##########################################################
 
